@@ -6,22 +6,12 @@
 
 <web-app>
     <servlet>
-        <servlet-name>TodoServlet</servlet-name>
-        <servlet-class>com.example.TodoServlet</servlet-class>
+        <servlet-name>RouterServlet</servlet-name>
+        <servlet-class>com.example.router.RouterServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>TodoServlet</servlet-name>
-        <url-pattern>/todos/*</url-pattern>
-    </servlet-mapping>
-
-    <servlet>
-        <servlet-name>TodosServlet</servlet-name>
-        <servlet-class>com.example.TodosServlet</servlet-class>
-    </servlet>
-
-    <servlet-mapping>
-        <servlet-name>TodosServlet</servlet-name>
-        <url-pattern>/todos</url-pattern>
+        <servlet-name>RouterServlet</servlet-name>
+        <url-pattern>/*</url-pattern>
     </servlet-mapping>
 </web-app>

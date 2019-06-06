@@ -1,5 +1,6 @@
-package com.example;
+package com.example.todo;
 
+import com.example.Util;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -13,7 +14,7 @@ public class TodoServlet extends HttpServlet {
     private static final Gson GSON = new GsonBuilder().create();
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+    public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         String uri = req.getRequestURI();
         Long id = Long.parseLong(uri.substring("/todos/".length()));
 
@@ -25,7 +26,7 @@ public class TodoServlet extends HttpServlet {
     }
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+    public void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         String uri = req.getRequestURI();
         Long id = Long.parseLong(uri.substring("/todos/".length()));
 
@@ -46,7 +47,7 @@ public class TodoServlet extends HttpServlet {
     }
 
     @Override
-    protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+    public void doPut(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         String uri = req.getRequestURI();
         Long id = Long.parseLong(uri.substring("/todos/".length()));
 
@@ -67,7 +68,7 @@ public class TodoServlet extends HttpServlet {
     }
 
     @Override
-    protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+    public void doDelete(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         String uri = req.getRequestURI();
         Long id = Long.parseLong(uri.substring("/todos/".length()));
 
